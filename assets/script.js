@@ -13,8 +13,9 @@ $(function () {
     event.preventDefault();
     var textEl = $(this).siblings(".description").text()
     var hour = $(this).siblings(".hour").val();
-    localStorage.setItem(textEl, hour);
-  })
+    // localStorage.setItem(textEl, hour);
+    localStorage.setItem(hour, JSON.stringify(textEl));
+    })
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
@@ -22,14 +23,30 @@ $(function () {
   // current hour in 24-hour time?
 
   //Created loop for time block to add past, present and future
-
+ $(".time-block").each(function(){
+  var time = parseInt($(this).attr("id").split("-")[1]);
+  var hour = dayjs().hour();
+console.log(time);
+console.log(hour);
+  if (time < hour) {
+    $(this).addClass("past");
+  } else if (time === hour) {
+    $(this).removeClass("past");
+    $(this).addClass("present");
+  } else {
+    $(this).removeClass("present");
+    $(this).addClass("future");
+  }
+ })
 
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
+// for (var i = 0; i < )
+
   // TODO: Add code to display the current date in the header of the page.
-  var today = dayjs();
-  var seconds = Date.now()
+  var today = dayjs()
+  // var seconds = Date.now()
   $("#currentDay").text(today.format("MM/DD/YYYY"));
 });
