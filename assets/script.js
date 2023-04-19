@@ -24,15 +24,15 @@ $(function () {
 
 
   // Added local getItem to store text input in description
-  $("#hour-9 textEl").val(localStorage.getItem("hour-9"));
-  $("#hour-10 textEl").val(localStorage.getItem("hour-10"));
-  $("#hour-11 textEl").val(localStorage.getItem("hour-11"));
-  $("#hour-12 textEl").val(localStorage.getItem("hour-12"));
-  $("#hour-13 textEl").val(localStorage.getItem("hour-13"));
-  $("#hour-14 textEl").val(localStorage.getItem("hour-14"));
-  $("#hour-15 textEl").val(localStorage.getItem("hour-15"));
-  $("#hour-16 textEl").val(localStorage.getItem("hour-16"));
-  $("#hour-17 textEl").val(localStorage.getItem("hour-17"));
+  $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+  $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+  $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+  $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+  $("#hour-13 .description").val(localStorage.getItem("hour-13"));
+  $("#hour-14 .description").val(localStorage.getItem("hour-14"));
+  $("#hour-15 .description").val(localStorage.getItem("hour-15"));
+  $("#hour-16 .description").val(localStorage.getItem("hour-16"));
+  $("#hour-17 .description").val(localStorage.getItem("hour-17"));
 
 // Show current day of the week and date in subheader
   var today = dayjs()
