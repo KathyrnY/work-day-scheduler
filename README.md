@@ -10,6 +10,7 @@ https://kathyrny.github.io/work-day-scheduler/
 
 ## Visual 
 
+[Untitled_ Apr 19, 2023 4_47 PM.webm](https://user-images.githubusercontent.com/127566404/233196969-ae42406d-8755-431d-a680-98a9bedd557b.webm)
 
 ## Credits
 UNC Chapel Hill Fullstack Bootcamp
